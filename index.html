@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VoiceSnip 隐私政策 · Privacy Policy</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0 auto;
+        max-width: 760px;
+        padding: 32px 20px 80px;
+        font: 16px/1.7 -apple-system, "Segoe UI", "PingFang SC",
+          "Microsoft YaHei", sans-serif;
+      }
+      h1 {
+        font-size: 26px;
+        margin-bottom: 4px;
+      }
+      h2 {
+        font-size: 19px;
+        margin-top: 32px;
+        border-bottom: 1px solid #8884;
+        padding-bottom: 6px;
+      }
+      h3 {
+        font-size: 16px;
+        margin-top: 22px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        margin: 12px 0;
+      }
+      th,
+      td {
+        border: 1px solid #8884;
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      code {
+        font-size: 13px;
+        background: #8882;
+        padding: 1px 4px;
+        border-radius: 3px;
+      }
+      .meta {
+        color: #777;
+        font-size: 14px;
+      }
+      nav a {
+        margin-right: 12px;
+      }
+      hr {
+        margin: 48px 0;
+        border: 0;
+        border-top: 1px solid #8884;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>VoiceSnip 隐私政策</h1>
+    <p class="meta">
+      VoiceSnip（网页剪声）· Chrome 扩展 · 生效日期：2026-10-14<br />
+      联系方式：<a href="mailto:bright103huang@gmail.com"
+        >bright103huang@gmail.com</a
+      >
+    </p>
+    <nav>
+      <a href="#zh">中文</a><a href="#en">English</a>
+    </nav>
+
+    <hr />
+
+    <section id="zh">
+      <h1>中文版</h1>
+
+      <h2>1. 一句话摘要</h2>
+      <p>
+        VoiceSnip 把你在浏览器标签页里主动录制的声音，交给你<strong>自己</strong>配置的
+        AssemblyAI 账号去分离说话人，然后把片段和文字存到你自己电脑上。开发者
+        <strong>没有服务器</strong>，收不到你的录音、文字或密钥，也没有统计和广告。
+      </p>
+
+      <h2>2. 扩展会处理哪些数据</h2>
+      <table>
+        <tr>
+          <th>数据</th>
+          <th>什么时候产生</th>
+          <th>用来做什么</th>
+          <th>存在哪里</th>
+        </tr>
+        <tr>
+          <td>标签页音频（16 kHz 单声道 WAV）</td>
+          <td>只有你点「开始录制」，或按快捷键 / 用右键菜单主动发起时才录制</td>
+          <td>分离说话人、生成片段与配套文本</td>
+          <td>你浏览器的本地存储（OPFS），<strong>只保留最近 3 段</strong>，更早的自动删除</td>
+        </tr>
+        <tr>
+          <td>AssemblyAI API 密钥</td>
+          <td>你自己在设置里粘贴并保存时</td>
+          <td>代表你调用你自己的 AssemblyAI 账号</td>
+          <td><code>chrome.storage.local</code>，只在本机，不写日志、不随导出文件外传</td>
+        </tr>
+        <tr>
+          <td>转写与分离结果</td>
+          <td>云端返回后</td>
+          <td>让你关掉面板再打开时不必重新上传、不重复付费</td>
+          <td><code>chrome.storage.local</code>，导出成功后即清除</td>
+        </tr>
+        <tr>
+          <td>设置与界面状态</td>
+          <td>你切换语言、同意本政策、选过说话人时</td>
+          <td>记住你的选择</td>
+          <td><code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td>导出的音频与文本文件</td>
+          <td>你点导出时</td>
+          <td>交付产物</td>
+          <td>你自己电脑的下载目录 <code>下载\voice-extract\</code>，由你自行处置</td>
+        </tr>
+      </table>
+
+      <h2>3. 数据会发给谁</h2>
+      <p>
+        只有一方：<strong>你自己配置的 AssemblyAI 账号</strong>（域名
+        <code>api.assemblyai.com</code>）。扩展把录音上传到你自己的账号做说话人分离与
+        转写，再取回结果。这条传输走 HTTPS。
+      </p>
+      <p>
+        AssemblyAI 是独立的第三方服务，它的数据处理由
+        <a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank" rel="noreferrer"
+          >AssemblyAI 自己的隐私政策</a
+        >
+        和你的账号设置决定。开发者无法访问、也无法代为删除你账号里的数据。如果你没有
+        配置密钥，扩展<strong>完全不联网</strong>，只在本机按静音切分音频。
+      </p>
+
+      <h2>4. 我们不做的事</h2>
+      <ul>
+        <li>没有自建服务器，音频、文本、密钥都不会发到开发者这里。</li>
+        <li>没有账号系统，不需要注册、登录，也不收集邮箱或任何身份信息。</li>
+        <li>没有统计分析、没有崩溃上报、没有广告，也没有第三方 SDK。</li>
+        <li>不读取、不上传你的浏览历史；只有你主动录制的那一个标签页的音频会被处理。</li>
+        <li>不把数据卖给或转给任何第三方，不用于广告画像、信用评估等任何用途。</li>
+        <li>没有任何人会人工查看你的数据——开发者根本拿不到。</li>
+      </ul>
+
+      <h2>5. 保留多久 / 你怎么删</h2>
+      <ul>
+        <li>
+          <strong>本机录音</strong>：只保留最近 3 段，被新录制顶掉时旧文件即被删除；
+          卸载扩展会清空全部本地数据（含浏览器本地存储与 OPFS）。
+        </li>
+        <li>
+          <strong>密钥</strong>：面板里的「清除 key」按钮可随时删除；卸载扩展也会一并清除。
+        </li>
+        <li>
+          <strong>已导出到下载目录的文件</strong>：由你自己管理，扩展不会再去碰它们。
+        </li>
+        <li>
+          <strong>已经上传到你自己 AssemblyAI 账号的音频</strong>：请到 AssemblyAI
+          账号里删除，这部分不在扩展的控制范围内。
+        </li>
+      </ul>
+
+      <h2>6. 安全</h2>
+      <p>
+        所有网络请求均使用 HTTPS；密钥只存放在本机
+        <code>chrome.storage.local</code>，不会写入日志，也不会出现在导出的音频或文本文件里。
+        扩展不加载、也不执行任何远程下发的代码。
+      </p>
+
+      <h2>7. 有限使用（Limited Use）声明</h2>
+      <p>
+        从 Google API 获得的信息的使用将遵守 Chrome
+        应用商店用户数据政策，包括其中的有限使用（Limited Use）要求。
+      </p>
+      <p class="meta">
+        The use of information received from Google APIs will adhere to the Chrome
+        Web Store User Data Policy, including the Limited Use requirements.
+      </p>
+
+      <h2>8. 儿童</h2>
+      <p>
+        本扩展面向能够自行理解并同意本政策的成年用户，不面向儿童，也不会有意收集儿童的
+        任何数据。
+      </p>
+
+      <h2>9. 政策更新</h2>
+      <p>
+        数据做法有实质变化时，我们会更新本页并修改顶部的生效日期；如果变化影响到你，
+        扩展会在你下次打开时重新征求你的同意。
+      </p>
+
+      <h2>10. 联系方式</h2>
+      <p>
+        任何与本政策有关的问题，写信到
+        <a href="mailto:bright103huang@gmail.com">bright103huang@gmail.com</a>。
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="en" lang="en">
+      <h1>English version</h1>
+
+      <h2>1. Summary</h2>
+      <p>
+        VoiceSnip records audio from a browser tab that you explicitly start recording,
+        hands that audio to the AssemblyAI account <strong>you</strong> configured so it
+        can separate the speakers, and then saves the clips and transcripts on your own
+        computer. The developer runs <strong>no servers</strong> and never receives your
+        audio, transcripts or API key. There is no analytics and no advertising.
+      </p>
+
+      <h2>2. What data the extension handles</h2>
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>When it is produced</th>
+          <th>Why</th>
+          <th>Where it lives</th>
+        </tr>
+        <tr>
+          <td>Tab audio (16 kHz mono WAV)</td>
+          <td>Only after you press Start recording, press the shortcut, or use the
+            context menu entry yourself</td>
+          <td>To separate speakers and produce clips plus transcripts</td>
+          <td>Your browser's local storage (OPFS); <strong>only the last 3 takes
+            are kept</strong>, older ones are deleted automatically</td>
+        </tr>
+        <tr>
+          <td>AssemblyAI API key</td>
+          <td>When you paste and save it in the settings panel</td>
+          <td>To call your own AssemblyAI account on your behalf</td>
+          <td><code>chrome.storage.local</code>, on this machine only. Never logged,
+            never included in exported files</td>
+        </tr>
+        <tr>
+          <td>Transcription and separation results</td>
+          <td>After the cloud returns them</td>
+          <td>So reopening the panel does not re-upload or charge you twice</td>
+          <td><code>chrome.storage.local</code>, cleared as soon as you export</td>
+        </tr>
+        <tr>
+          <td>Settings and UI state</td>
+          <td>When you switch language, accept this policy, or pick a speaker</td>
+          <td>To remember your choices</td>
+          <td><code>chrome.storage.local</code></td>
+        </tr>
+        <tr>
+          <td>Exported audio and text files</td>
+          <td>When you press export</td>
+          <td>To deliver the result</td>
+          <td>Your own Downloads folder, <code>voice-extract\</code>, under your control</td>
+        </tr>
+      </table>
+
+      <h2>3. Who receives data</h2>
+      <p>
+        Exactly one party: <strong>the AssemblyAI account you configured yourself</strong>
+        (<code>api.assemblyai.com</code>). The extension uploads the recording to your own
+        account for speaker separation and transcription, then retrieves the result. That
+        transfer uses HTTPS.
+      </p>
+      <p>
+        AssemblyAI is an independent third-party service, and its handling of your data is
+        governed by
+        <a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank" rel="noreferrer"
+          >AssemblyAI's own privacy policy</a
+        >
+        and your account settings. The developer cannot access or delete data inside your
+        account. If you have not configured a key, the extension
+        <strong>makes no network requests at all</strong> and splits audio locally by
+        silence.
+      </p>
+
+      <h2>4. What we do not do</h2>
+      <ul>
+        <li>No developer servers: audio, transcripts and keys never reach us.</li>
+        <li>No accounts, no sign-up, no collection of emails or identity data.</li>
+        <li>No analytics, no crash reporting, no ads, no third-party SDKs.</li>
+        <li>No reading or uploading of your browsing history; only the audio of the one
+          tab you deliberately recorded is processed.</li>
+        <li>No selling or transferring of data to anyone, and no use for ad targeting or
+          credit assessment.</li>
+        <li>No human ever reads your data — the developer simply does not have it.</li>
+      </ul>
+
+      <h2>5. Retention and how to delete</h2>
+      <ul>
+        <li><strong>Local recordings:</strong> only the last 3 takes are kept; older ones
+          are deleted when a new take rotates them out. Uninstalling the extension clears
+          all local data (extension storage and OPFS).</li>
+        <li><strong>API key:</strong> the "Clear key" button removes it at any time;
+          uninstalling removes it too.</li>
+        <li><strong>Files already exported</strong> to your Downloads folder are yours to
+          manage; the extension never touches them again.</li>
+        <li><strong>Audio already uploaded to your own AssemblyAI account:</strong> delete
+          it from that account. It is outside the extension's control.</li>
+      </ul>
+
+      <h2>6. Security</h2>
+      <p>
+        All network requests use HTTPS. The key is kept only in local
+        <code>chrome.storage.local</code>, is never written to logs, and never appears in
+        exported audio or text files. The extension does not load or execute any remotely
+        hosted code.
+      </p>
+
+      <h2>7. Limited Use statement</h2>
+      <p>
+        The use of information received from Google APIs will adhere to the Chrome Web
+        Store User Data Policy, including the Limited Use requirements.
+      </p>
+
+      <h2>8. Children</h2>
+      <p>
+        This extension is intended for adult users who can read and agree to this policy.
+        It is not directed at children and does not knowingly collect any data from them.
+      </p>
+
+      <h2>9. Changes to this policy</h2>
+      <p>
+        If our data practices change materially we will update this page and the effective
+        date at the top. If a change affects you, the extension will ask for your consent
+        again the next time you open it.
+      </p>
+
+      <h2>10. Contact</h2>
+      <p>
+        For any question about this policy, write to
+        <a href="mailto:bright103huang@gmail.com">bright103huang@gmail.com</a>.
+      </p>
+    </section>
+  </body>
+</html>
